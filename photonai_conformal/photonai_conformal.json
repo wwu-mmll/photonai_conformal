@@ -1,6 +1,6 @@
 {
   "DummyTransformer": [
-    "project_name.dummy.DummyTransformer",
+    "photonai_conformal.dummy.DummyTransformer",
     "Transformer"
   ]
 }

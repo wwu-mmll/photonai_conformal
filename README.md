@@ -34,7 +34,7 @@ In order to add a new Algorithm / Feature to your project you can follow the ste
 - [ ] Test your algorithms in a respective test file in the `test` folder 
 - [ ] Document algorithms in the `docs` folder by copying and adapting the provided .md file
 - [ ] Provide an example on how to use your algorithms in an appropriately named file in the examples folder.
-- [ ] Expose the algorithm to photonai by adding it to the the `project_name/project_name.json` file with the full path. An example is provided within this repository.  Thereby, the algorithm can be imported via its name, as defined in the json file. Make sure to pick a unique name. 
+- [ ] Expose the algorithm to photonai by adding it to the the `photonai_conformal/photonai_conformal.json` file with the full path. An example is provided within this repository.  Thereby, the algorithm can be imported via its name, as defined in the json file. Make sure to pick a unique name. 
 
 **In order to access your algorithms and functions in photonai you have to import your module once in your final script. This triggers the registration process in the photonai core module!**
 

@@ -1,7 +1,7 @@
 from unittest import TestCase
 import numpy as np
 
-from project_name.dummy.DummyTransformer import DummyTransformer
+from photonai_conformal.dummy.DummyTransformer import DummyTransformer
 
 
 class DummyTest(TestCase):

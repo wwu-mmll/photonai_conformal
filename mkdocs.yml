@@ -1,7 +1,7 @@
 # Project information
-site_name: project_name
-repo_name: 'project_urlname'
-repo_url: 'https://github.com/wwu-mmll/project_name'
+site_name: photonai_conformal
+repo_name: 'photonai_conformal'
+repo_url: 'https://github.com/wwu-mmll/photonai_conformal'
 edit_uri: 'edit/master/docs'
 
 
