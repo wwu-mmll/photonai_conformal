@@ -1,0 +1,6 @@
+{
+  "DummyTransformer": [
+    "project_name.dummy.DummyTransformer",
+    "Transformer"
+  ]
+}
