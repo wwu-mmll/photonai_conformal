@@ -48,9 +48,10 @@ markdown_extensions:
 nav: 
   - Home: "index.md"
   - API:
-      - DummyTransformer: "api/DummyTransformer.md"
+      - ConformalClassifier: "api/ConformalClassifier.md"
+      - ConformalRegressor: "api/ConformalRegressor.md"
   - Examples:
-      - DummyTransformer: "examples/DummyTransformer/DummyTransformer_example.ipynb"
+      - DummyTransformer: "examples/ConformalRegressor/ConformalRegressorExample.ipynb"
 
 extra_css:
   - assets/stylesheets/material.css
