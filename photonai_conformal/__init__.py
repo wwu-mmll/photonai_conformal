@@ -3,7 +3,7 @@ from datetime import datetime
 from photonai.base import PhotonRegistry
 from photonai.photonlogger import logger
 
-from .version import __version__
+from ._version import __version__
 
 
 def do_register(current_path, registered_file): # pragma: no cover

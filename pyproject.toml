@@ -1,0 +1,41 @@
+[project]
+name = "photonai-conformal"
+dynamic = ["version"]
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "mapie>=1.4.0",
+    "pbr>=7.0.3",
+    "photonai>=2.5.2",
+]
+authors = [
+    {name = "Jan Ernsting", email = "j.ernsting@uni-muenster.de"}
+]
+keywords = [
+    "machine learning",
+    "deep learning"
+]
+
+[project.urls]
+Homepage = "https://github.com/photonai_conformal/"
+"Source Code" = "https://github.com/wwu-mmll/photonai_conformal/"
+Documentation = "https://wwu-mmll.github.io/photonai_conformal/"
+"Bug Tracker" = "https://github.com/wwu-mmll/photonai_conformal/issues"
+Download = "https://pypi.org/project/photonai_conformal/#files"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.hooks.vcs]
+version-file = "photonai_conformal/_version.py"  # optional: writes version to a file at build time
+
+[dependency-groups]
+dev = [
+    "ipykernel>=7.2.0",
+    "jupyter>=1.1.1",
+]

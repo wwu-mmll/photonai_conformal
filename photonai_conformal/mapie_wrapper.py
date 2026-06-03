@@ -3,9 +3,16 @@ import numpy as np
 import itertools
 from sklearn.base import BaseEstimator, RegressorMixin, ClassifierMixin
 
-from mapie.classification import MapieClassifier
-from mapie.regression import MapieRegressor
+from mapie.classification import SplitConformalClassifier, CrossConformalClassifier
+from mapie.regression import SplitConformalRegressor, CrossConformalRegressor
 
+classifiers = {
+    "CrossConformalClassifier": CrossConformalClassifier,
+}
+
+regressors = {
+    "CrossConformalRegressor": CrossConformalRegressor,
+}
 
 class MapieWrapper(ABC, BaseEstimator):
 
@@ -23,7 +30,9 @@ class MapieWrapper(ABC, BaseEstimator):
 
 class ConformalClassifier(MapieWrapper, ClassifierMixin):
     def __init__(self,
+                 classifier:str = "SplitConformalClassifier",
                  estimator=None,
+                 confidence_level:float = 0.9,
                  method="score",
                  cv=None,
                  n_jobs=None,
@@ -50,8 +59,11 @@ class ConformalClassifier(MapieWrapper, ClassifierMixin):
         self.random_state = random_state
         self.verbose = verbose
         self.alpha = alpha
-        self.clf = MapieClassifier(estimator=estimator,
-                                   method=method,
+        if classifier is None or classifier not in classifiers.keys():
+            self.clf = NotImplementedError(f"Expected one classifier of {list(classifiers.keys())}, got {classifier}")
+        self.classifier = classifiers[classifier]
+        self.clf = self.classifier(estimator=estimator,
+                                   confidence_level = confidence_level,
                                    cv=cv,
                                    n_jobs=n_jobs,
                                    random_state=random_state,
